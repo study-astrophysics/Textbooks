@@ -1,2 +1,2 @@
 # Textbook-Solutions
-LaTeX format solution files for every textbooks.
+Solutions of the exercise problems using LaTeX
