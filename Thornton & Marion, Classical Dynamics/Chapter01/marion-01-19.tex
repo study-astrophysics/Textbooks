@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+
+\usepackage[paperwidth=21cm, paperheight=31cm, margin=0.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\titleformat*{\section}{\Huge\bfseries}
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+\begin{document}
+\Large
+\section*{(a)  $\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$}
+
+From the law of cosines,
+
+\begin{equation}
+  |\vec{a} - \vec{b}|^2 = |\vec{a}|^2 + |\vec{b}|^2 - 2|\vec{a}||\vec{b}|\cos(\alpha - \beta) 
+\end{equation}
+\\
+
+$\begin{array}{rcl}
+	| \vec{a} - \vec{b} |^2  & = & (a \cos \alpha - b \cos \beta)^2 - (a \sin \alpha - b \sin \beta)^2 \\
+\\
+	& = & ( a^2\cos^2\alpha - 2ab \cos\alpha\cos\beta + b^2\cos^2\beta) + (a^2\sin\alpha - 2ab\sin\alpha\sin\beta + b^2\sin^2\beta) \\
+\\
+	& = & a^2 + b^2 - 2ab(\cos\alpha\cos\beta+\sin\alpha\sin\beta
+\end{array}
+$\\\\
+
+$
+|\vec{a}|^2+|\vec{b}|^2-2|\vec{a}||\vec{b}|\cos(\alpha-\beta) = a^2 + b^2 - 2ab\cos(\alpha-\beta) 
+$
+\\\\
+
+$
+\therefore \ \cos (\alpha - \beta) = \cos\alpha \cos \beta - \sin \alpha \sin \beta
+$
+
+\section*{(b)  $ \sin (\alpha - \beta) = \sin\alpha \cos \beta - \cos \alpha \sin \beta $}
+
+From the Pythagorean identity, 
+
+\begin{equation}
+  \sin^2(\alpha-\beta)+\cos^2(\alpha-\beta) = 1
+\end{equation}
+\\
+
+$
+\begin{array}{rcl}
+\sin(\alpha-\beta) & = & \sqrt{1-\cos^2(\alpha-\beta)} \\\\
+& = & \sqrt{1-(\cos\alpha\cos\beta+\sin\alpha\sin\beta)^2} \\\\
+& = & \sqrt{1-(\cos^2\alpha\cos^2\beta+2\cos\alpha\cos\beta\sin\alpha\sin\beta+\sin^2\alpha\sin^2\beta)} \\\\
+& = & \sqrt{1-\{\cos^2\alpha(1-\sin^2\beta)+2\cos\alpha\cos\beta\sin\alpha\sin\beta+\sin^2\alpha(1-\cos^2\beta)\}} \\\\
+& = & \sqrt{1-(\cos^2\alpha-\cos^2\alpha\sin^2\beta+2\cos\alpha\cos\beta\sin\alpha\sin\beta+\sin^2\alpha-\sin^2\alpha\cos^2\beta)} \\\\
+& = & \sqrt{\cos^2\alpha\sin^2\beta-2\cos\alpha\cos\beta\sin\alpha\sin\beta+\sin^2\alpha\cos^2\beta} \\\\
+& = & \sqrt{(\cos\alpha\sin\beta-\sin\alpha\cos\beta)^2} \\\\
+& = & \cos\alpha\sin\beta-\sin\alpha\cos\beta
+\end{array}	
+$
+\\\\
+
+$
+\therefore \ \sin(\alpha-\beta) = \cos\alpha\sin\beta-\sin\alpha\cos\beta
+$
+
+\end{document}
