@@ -1,0 +1,184 @@
+\documentclass[a4paper]{article}
+
+\usepackage[paperwidth=21cm, paperheight=91cm, margin=0.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{diagbox}
+\usepackage{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{xcolor}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\Huge\bfseries}
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+\begin{document}
+\Large
+\section*{(a)  $ {\sum\limits_{i,j}} \epsilon_{ijk} \ \delta_{ij} = 0$}
+
+From the definition of the \textbf{Kronecker delta symbol} (Equation (1.14))
+
+\begin{equation}
+	\delta_{ik} = 
+	  \begin{cases}
+	  	\ 0 & \text{if } i \neq k \\
+	    \ 1 & \text{if } i = k
+	  \end{cases}  \tag{1.14}
+\end{equation}
+\\
+and \textbf{permutation symbol} (or \textbf{Levi-Civita density}) (Equation (1.67))
+\begin{equation}
+	\epsilon_{ijk} = 
+	  \begin{cases}
+	  	\ 0  & \text{if any index is equal to any other index} \\
+	  	\ 1  & \text{if $i,j,k$ form and \textit{even} permutation of 1,2,3}\\
+	  	-1 & \text{if $i,j,k$ form and \textit{odd} permutation of 1,2,3}
+	  \end{cases},  \tag{1.67}
+\end{equation}
+\\
+
+When $i = j$, 
+
+\begin{eqnarray*}
+	\delta_{ij} & = & 1 \\
+	\epsilon_{ijk} & = & 0
+\end{eqnarray*}
+
+\begin{equation*}
+	\therefore \ \sum_{ij} \delta_{ij} \ \epsilon_{ijk} = 0,
+\end{equation*}
+\\
+and when $i \neq j$,
+
+\begin{eqnarray*}
+	\delta_{ij} & = & 0 \\
+	\epsilon_{ijk} & = & 1
+\end{eqnarray*}
+
+\begin{equation*}
+	\therefore \ \sum_{ij} \delta_{ij} \ \epsilon_{ijk} = 0.
+\end{equation*}
+
+Therfore,
+
+\begin{equation*}
+	\therefore \ \sum_{ij} \delta_{ij} \ \epsilon_{ijk} = 0.
+\end{equation*}
+
+
+\section*{(b)  $ {\sum\limits_{j,k}} \epsilon_{ijk} \ \epsilon_{ljk} = 2\delta_{il}$} 
+
+\begin{eqnarray*}
+	\sum_{j,k} \epsilon_{ijk} \ \epsilon_{ljk} & = & \cancel{\epsilon_{i11} \ \epsilon_{l11}} + \epsilon_{i12} \ \epsilon_{l12} + \epsilon_{i13} \ \epsilon_{l13} + \epsilon_{i21} \ \epsilon_{l21} + \cancel{\epsilon_{i22} \ \epsilon_{l22}} + \epsilon_{i23} \ \epsilon_{l23} \\
+	&  & + \ \epsilon_{i31} \ \epsilon_{i31} + \epsilon_{i32} \ \epsilon_{l32} + \cancel{\epsilon_{i33} \ \epsilon_{l33}} \\\\
+	& = & \epsilon_{i12} \ \epsilon_{l12} + \epsilon_{i13} \ \epsilon_{l13} + \epsilon_{i21} \ \epsilon_{l21} + \epsilon_{i23} \ \epsilon_{l23} + \epsilon_{i31} \ \epsilon_{i31} + \epsilon_{i32} \ \epsilon_{l32}
+\end{eqnarray*}
+
+If $i = l$,
+
+\begin{eqnarray*}
+	\sum_{j,k} \epsilon_{ijk} \ \epsilon_{ljk} & = & (\epsilon_{i12})^2 + (\epsilon_{i13})^2 + (\epsilon_{i21})^2 + (\epsilon_{i23})^2 + (\epsilon_{i31})^2 + (\epsilon_{i32})^2 \\
+	& = & 0^2 + 0^2 + 0^2 + 1^2 + 0^2 + (-1)^2 \quad = 2 \text{\qquad if $i = 1$} \\\\
+	& = & 0^2 + (-1)^2 + 0^2 + 0^2 + 1^2 + 0^2 \quad = 2 \text{\qquad if $i = 2$} \\\\
+	& = & 1^2 + 0^2 + (-1)^2 + 0^2 + 0^2 + 0^2 \quad = 2 \text{\qquad if $i = 3$}.
+\end{eqnarray*}
+
+\begin{equation*}
+	\therefore \ \sum_{j,k} \epsilon_{ijk} \ \epsilon_{ljk} = 2 \text{\qquad when $i = l$}
+\end{equation*}
+And if $i \neq l$,
+
+\begin{eqnarray*}
+	\sum_{j,k} \epsilon_{ijk} \ \epsilon_{ljk} & = & \epsilon_{i12} \ \epsilon_{l12} + \epsilon_{i13} \ \epsilon_{l13} + \epsilon_{i21} \ \epsilon_{l21} + \epsilon_{i23} \ \epsilon_{l23} + \epsilon_{i31} \ \epsilon_{i31} + \epsilon_{i32} \ \epsilon_{l32}\\
+	& = & 0\cdot0 + 0\cdot(-1) + 0\cdot0 + 1\cdot0 + 0\cdot1 + (-1)\cdot0 \quad = 0 \text{\qquad when $i=1,\ l=2$} \\\\
+	& = & 0\cdot(-1) + 0\cdot0 + 0\cdot(-1) + 1\cdot0 + 0\cdot0 + (-1)\cdot0 \quad = 0 \text{\qquad when $i=1, \ l=3$} \\\\
+	& = & 0\cdot0 + (-1)\cdot0 + 0\cdot0 + 0\cdot1 + 1\cdot0 + 0\cdot(-1) \quad = 0 \text{\qquad when $i=2,\ l=1$} \\\\
+	& = & 0\cdot1 + (-1)\cdot0 + 0\cdot(-1) + 0\cdot0 + 1\cdot0 + 1\cdot0 \quad = 0 \text{\qquad when $i=2,\ l=3$} \\\\
+	& = & (-1)\cdot0 + 0\cdot0 + (-1)\cdot0 + 0\cdot1 + 0\cdot0 + 0\cdot(-1) \quad = 0 \text{\qquad when $i=3,\ l=1$} \\\\
+	& = & (-1)\cdot0 + 0\cdot(-1) + (-1)\cdot0 + 0\cdot0 + 0\cdot1 + 0\cdot0 \quad = 0 \text{\qquad when $i=3,\ l=2$}
+\end{eqnarray*}
+
+\begin{equation*}
+	\therefore \ \sum_{j,k} \epsilon_{ijk} \ \epsilon_{ljk} = 0 \text{\qquad when $i \neq l$}
+\end{equation*}
+\\
+
+Therefore,
+
+\begin{equation*}
+	\sum_{j,k} \epsilon_{ijk} \ \epsilon_{ljk} = 2 \delta_{il} = 
+	\begin{cases}
+	  	\ 0 & \text{if } i \neq l \\
+	    \ 2 & \text{if } i = l
+	  \end{cases}
+\end{equation*}
+
+
+\section*{(c) $ {\sum\limits_{i,j,k}} \epsilon_{ijk} \ \epsilon_{ijk} = 6$}
+
+When $i = 1$, then the $\epsilon_{ijk}$ is \\
+
+\begin{center}
+\scalebox{2.0}{
+\begin{tabular}{|c|c|c|c|}
+\hline
+\diagbox{j}{k} & 1 & 2 & 3 \\
+\hline
+1 & 0 & 0 & 0 \\ \hline
+2 & 0 & 0 & 1 \\\hline
+3 & 0 & -1& 0 \\
+\hline
+\end{tabular}	
+}
+\vspace*{1 cm}
+\end{center}
+
+
+When $i = 2$, then the $\epsilon_{ijk}$ is \\
+
+\begin{center}
+\scalebox{2.0}{
+\begin{tabular}{|c|c|c|c|}
+\hline
+\diagbox{j}{k} & 1 & 2 & 3 \\
+\hline
+1 & 0 & 0 &-1 \\ \hline
+2 & 0 & 0 & 0 \\\hline
+3 & 1 & 0 & 0 \\
+\hline
+\end{tabular}	
+}
+\vspace*{1 cm}
+\end{center}
+
+
+When $i = 3$, then the $\epsilon_{ijk}$ is \\
+
+\begin{center}
+\scalebox{2.0}{
+\begin{tabular}{|c|c|c|c|}
+\hline
+\diagbox{j}{k} & 1 & 2 & 3 \\
+\hline
+1 & 0 & 1 & 0 \\ \hline
+2 &-1 & 0 & 0 \\\hline
+3 & 0 & 0 & 0 \\
+\hline
+\end{tabular}	
+}
+\vspace*{1 cm}
+\end{center}
+
+Therefore,
+
+\begin{equation*}
+  \sum_{i,j,k} \epsilon_{ijk} \ \epsilon_{ijk} = 1^2 + (-1)^2 + (-1)^2 + 1^2 + 1^2 + (-1)^2 = 6
+\end{equation*}
+
+
+\end{document}
