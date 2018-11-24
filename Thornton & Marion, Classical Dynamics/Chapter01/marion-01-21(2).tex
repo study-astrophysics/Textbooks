@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+
+\usepackage[paperwidth=21cm, paperheight=16cm, margin=0.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{diagbox}
+\usepackage{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{xcolor}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\Huge\bfseries}
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+\begin{document}
+\Large
+
+From the Equation 1.66 (the components of \textbf{vector product}), when $\vec{C} = \vec{A} \times \vec{B}$,
+
+\begin{equation}
+	C_i \equiv (\vec{A}\times\vec{B})_i = \sum_{j,k} \epsilon_{ijk}A_jB_k \tag{1.66}
+\end{equation}
+\\
+and the definition of the \textbf{scalar product} (Equation 1.52),
+
+\begin{equation}
+  \vec{A}\cdot\vec{B} = \sum_i A_i B_i \tag{1.52}
+\end{equation}
+\\
+
+Then, the \textbf{triple scalar product} is
+
+\begin{eqnarray*}
+	\mathbf{ABC} = \vec{A}\cdot(\vec{B}\times\vec{C}) & = & \sum_i A_i (\vec{B}\times\vec{C})_i \\
+	& = & \sum_i A_i \Big(\sum_{j,k} \epsilon_{ijk}B_jC_k \Big) \\
+	& = & \sum_i \sum_{j,k} \epsilon_{ijk}A_iB_jC_k \\
+	& = & \sum_{i,j,k} \epsilon_{ijk}A_iB_jC_k
+\end{eqnarray*}
+Therefore,
+
+\begin{equation*}
+	\mathbf{ABC} = \sum_{i,j,k} \epsilon_{ijk}A_iB_jC_k
+\end{equation*}
+
+\end{document}
