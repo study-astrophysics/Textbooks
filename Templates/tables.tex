@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+
+\usepackage[paperwidth=21cm, paperheight=16cm, margin=0.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{diagbox}
+\usepackage{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{xcolor}
+\usepackage{verbatim}
+
+
+\usepackage{titlesec}
+\titleformat*{\section}{\Huge\bfseries}
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titleformat*{\subsection}{\LARGE\bfseries}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+\begin{document}
+\Large
+
+\section{3$\times$3 table}
+
+\begin{center}
+\scalebox{2.0}{
+\begin{tabular}{|c|c|c|c|}
+\hline
+\diagbox{j}{k} & 1 & 2 & 3 \\
+\hline
+1 & 0 & 0 & 0 \\ \hline
+2 & 0 & 0 & 1 \\\hline
+3 & 0 & -1& 0 \\
+\hline
+\end{tabular}	
+}
+\vspace*{1 cm}
+\end{center}
+
+
+\section{Two 3$\times$3 tables in a row}
+
+\begin{center}
+	\begin{tabular}{cc}
+	\scalebox{1.5}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\diagbox{j}{k} & 1 & 2 & 3 \\ \hline
+			1 & 0 & 0 & 0 \\ \hline
+			2 & 0 & 0 & 1 \\ \hline
+			3 & 0 & -1& 0 \\ 
+			\hline
+		\end{tabular}	
+	}
+	&
+	\scalebox{1.5}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\diagbox{m}{k} & 1 & 2 & 3 \\ \hline
+			1 & 0 & 0 & 0 \\ \hline
+			2 & 0 & 0 & 1 \\ \hline
+			3 & 0 & -1& 0 \\ 
+			\hline
+		\end{tabular}	
+	}
+	\end{tabular}
+	\vspace*{1 cm}
+\end{center}
+
+\section{Matrices}
+
+\section{Determinants}
+
+\begin{comment}
+\left| 
+\begin{array}{ccc} 
+	A_1 & A_2 & A_3 \\ 
+	B_1 & B_2 & B_3 \\ 
+	C_1 & C_2 & C_3 
+\end{array} 
+\right|
+\end{comment}
+
+\begin{equation*}
+	\mathbf{ABC} = (\vec{A} \times \vec{B}) \cdot \vec{C} = \left| \begin{array}{ccc} A_1 & A_2 & A_3 \\ B_1 & B_2 & B_3 \\ C_1 & C_2 & C_3 \end{array} \right|
+\end{equation*}
+\end{document}

@@ -1,19 +1,34 @@
 \documentclass[a4paper]{article}
 
-\usepackage[paperwidth=21cm, paperheight=31cm, margin=0.2cm]{geometry}
+\usepackage[paperwidth=21cm, paperheight=16cm, margin=0.2cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
+\usepackage{diagbox}
+\usepackage{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{xcolor}
+\usepackage{verbatim}
+
 \usepackage{titlesec}
 \titleformat*{\section}{\Huge\bfseries}
 \titlespacing*{\section}
 {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titleformat*{\subsection}{\LARGE\bfseries}
 \titlespacing*{\subsection}
 {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
 
 
 \begin{document}
 \Large
+
+\section{Equation Array (Left)}
+
+\begin{comment}
+$\begin{array}{rcl}
+	
+\end{array}
+\end{comment}
 
 $\begin{array}{rcl}
 	| \vec{a} - \vec{b} |^2  & = & (a \cos \alpha - b \cos \beta)^2 - (a \sin \alpha - b \sin \beta)^2 \\
@@ -23,5 +38,37 @@ $\begin{array}{rcl}
 	& = & a^2 + b^2 - 2ab(\cos\alpha\cos\beta+\sin\alpha\sin\beta
 \end{array}
 $\\\\
+
+$
+\begin{array}{rcl}
+\sin(\alpha-\beta) & = & \sqrt{1-\cos^2(\alpha-\beta)} \\\\
+& = & \sqrt{1-(\cos\alpha\cos\beta+\sin\alpha\sin\beta)^2} \\\\
+& = & \sqrt{1-(\cos^2\alpha\cos^2\beta+2\cos\alpha\cos\beta\sin\alpha\sin\beta+\sin^2\alpha\sin^2\beta)} \\\\
+& = & \sqrt{1-\{\cos^2\alpha(1-\sin^2\beta)+2\cos\alpha\cos\beta\sin\alpha\sin\beta+\sin^2\alpha(1-\cos^2\beta)\}} \\\\
+& = & \sqrt{1-(\cos^2\alpha-\cos^2\alpha\sin^2\beta+2\cos\alpha\cos\beta\sin\alpha\sin\beta+\sin^2\alpha-\sin^2\alpha\cos^2\beta)} \\\\
+& = & \sqrt{\cos^2\alpha\sin^2\beta-2\cos\alpha\cos\beta\sin\alpha\sin\beta+\sin^2\alpha\cos^2\beta} \\\\
+& = & \sqrt{(\cos\alpha\sin\beta-\sin\alpha\cos\beta)^2} \\\\
+& = & \cos\alpha\sin\beta-\sin\alpha\cos\beta
+\end{array}	
+$
+\\\\
+
+\section{Equation Array (Center)}
+
+\begin{comment}
+\begin{eqnarray*}
+	
+\end{eqnarray*}
+\end{comment}
+
+\begin{eqnarray*}
+	\sum_{j,k} \epsilon_{ijk} \ \epsilon_{ljk} & = & \epsilon_{i12} \ \epsilon_{l12} + \epsilon_{i13} \ \epsilon_{l13} + \epsilon_{i21} \ \epsilon_{l21} + \epsilon_{i23} \ \epsilon_{l23} + \epsilon_{i31} \ \epsilon_{i31} + \epsilon_{i32} \ \epsilon_{l32}\\
+	& = & 0\cdot0 + 0\cdot(-1) + 0\cdot0 + 1\cdot0 + 0\cdot1 + (-1)\cdot0 \quad = 0 \text{\qquad when $i=1,\ l=2$} \\\\
+	& = & 0\cdot(-1) + 0\cdot0 + 0\cdot(-1) + 1\cdot0 + 0\cdot0 + (-1)\cdot0 \quad = 0 \text{\qquad when $i=1, \ l=3$} \\\\
+	& = & 0\cdot0 + (-1)\cdot0 + 0\cdot0 + 0\cdot1 + 1\cdot0 + 0\cdot(-1) \quad = 0 \text{\qquad when $i=2,\ l=1$} \\\\
+	& = & 0\cdot1 + (-1)\cdot0 + 0\cdot(-1) + 0\cdot0 + 1\cdot0 + 1\cdot0 \quad = 0 \text{\qquad when $i=2,\ l=3$} \\\\
+	& = & (-1)\cdot0 + 0\cdot0 + (-1)\cdot0 + 0\cdot1 + 0\cdot0 + 0\cdot(-1) \quad = 0 \text{\qquad when $i=3,\ l=1$} \\\\
+	& = & (-1)\cdot0 + 0\cdot(-1) + (-1)\cdot0 + 0\cdot0 + 0\cdot1 + 0\cdot0 \quad = 0 \text{\qquad when $i=3,\ l=2$}
+\end{eqnarray*}
 
 \end{document}

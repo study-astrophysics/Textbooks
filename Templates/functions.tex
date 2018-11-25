@@ -1,0 +1,86 @@
+\documentclass[a4paper]{article}
+
+\usepackage[paperwidth=21cm, paperheight=16cm, margin=0.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{diagbox}
+\usepackage{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{xcolor}
+\usepackage{verbatim}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\Huge\bfseries}
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titleformat*{\subsection}{\LARGE\bfseries}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+\begin{document}
+\Large
+
+\section{Kronecker delta Symbol}
+
+From the definition of the \textbf{Kronecker delta symbol} (Equation (1.14))
+
+\begin{equation}
+	\delta_{ik} = 
+	  \begin{cases}
+	  	\ 0 & \text{if } i \neq k \\
+	    \ 1 & \text{if } i = k
+	  \end{cases}  \tag{1.14}
+\end{equation}
+
+\section{Levi-Civita Symbol}
+
+and \textbf{permutation symbol} (or \textbf{Levi-Civita density}) (Equation (1.67))
+\begin{equation}
+	\epsilon_{ijk} = 
+	  \begin{cases}
+	  	\ 0  & \text{if any index is equal to any other index} \\
+	  	\ 1  & \text{if $i,j,k$ form and \textit{even} permutation of 1,2,3}\\
+	  	-1 & \text{if $i,j,k$ form and \textit{odd} permutation of 1,2,3}
+	  \end{cases},  \tag{1.67}
+\end{equation}
+
+
+\section{Pythagorean identity}
+
+\begin{equation}
+  \sin^2(\alpha-\beta)+\cos^2(\alpha-\beta) = 1
+\end{equation}
+
+
+\section{If you want to put a cancel mark}
+
+\begin{comment}
+\cancel{}
+\end{comment}
+
+\begin{eqnarray*}
+	\sum_{j,k} \epsilon_{ijk} \ \epsilon_{ljk} & = & \cancel{\epsilon_{i11} \ \epsilon_{l11}} + \epsilon_{i12} \ \epsilon_{l12} + \epsilon_{i13} \ \epsilon_{l13} + \epsilon_{i21} \ \epsilon_{l21} + \cancel{\epsilon_{i22} \ \epsilon_{l22}} + \epsilon_{i23} \ \epsilon_{l23} \\
+	&  & + \ \epsilon_{i31} \ \epsilon_{i31} + \epsilon_{i32} \ \epsilon_{l32} + \cancel{\epsilon_{i33} \ \epsilon_{l33}} \\\\
+	& = & \epsilon_{i12} \ \epsilon_{l12} + \epsilon_{i13} \ \epsilon_{l13} + \epsilon_{i21} \ \epsilon_{l21} + \epsilon_{i23} \ \epsilon_{l23} + \epsilon_{i31} \ \epsilon_{i31} + \epsilon_{i32} \ \epsilon_{l32}
+\end{eqnarray*}
+
+\section{Scalar Product}
+
+and the definition of the \textbf{scalar product} (Equation 1.52),
+
+\begin{equation}
+  \vec{A}\cdot\vec{B} = \sum_i A_i B_i \tag{1.52}
+\end{equation}
+
+
+\section{Vector Product}
+
+From the Equation 1.66 (the components of \textbf{vector product}), when $\vec{C} = \vec{A} \times \vec{B}$,
+
+\begin{equation}
+	C_i \equiv (\vec{A}\times\vec{B})_i = \sum_{j,k} \epsilon_{ijk}A_jB_k \tag{1.66}
+\end{equation}
+
+\end{document}
