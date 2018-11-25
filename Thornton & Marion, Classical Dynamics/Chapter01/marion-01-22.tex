@@ -1,0 +1,181 @@
+\documentclass[a4paper]{article}
+
+\usepackage[paperwidth=21cm, paperheight=100cm, margin=0.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{diagbox}
+\usepackage{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{xcolor}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\Huge\bfseries}
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titleformat*{\subsection}{\LARGE\bfseries}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+\begin{document}
+\Large
+
+\section{Evaluate the sum $\sum\limits_{k}\epsilon_{ijk}\epsilon_{lmk} $}
+
+\subsection*{(a) $i = j$}
+
+Since $\epsilon_{ijk} = 0$ when $i = j$,
+
+\begin{equation*}
+	\sum_k \epsilon_{ijk}\epsilon_{lmk} = 0
+\end{equation*}
+
+\subsection*{(b) $i = l$}
+
+When $i = 1$, 
+
+\begin{center}
+	\begin{tabular}{cc}
+	\scalebox{1.5}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\diagbox{j}{k} & 1 & 2 & 3 \\ \hline
+			1 & 0 & 0 & 0 \\ \hline
+			2 & 0 & 0 & 1 \\ \hline
+			3 & 0 & -1& 0 \\ 
+			\hline
+		\end{tabular}	
+	}
+	&
+	\scalebox{1.5}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\diagbox{m}{k} & 1 & 2 & 3 \\ \hline
+			1 & 0 & 0 & 0 \\ \hline
+			2 & 0 & 0 & 1 \\ \hline
+			3 & 0 & -1& 0 \\ 
+			\hline
+		\end{tabular}	
+	}
+	\end{tabular}
+	\vspace*{1 cm}
+\end{center}
+
+Thus, 
+
+\begin{equation*}
+	\sum_k \epsilon_{1jk}\epsilon_{1mk} = 
+	\begin{cases}
+	  	\ 1 & \text{if } j = m \\
+	    \ 0 & \text{if } j \neq m
+	  \end{cases}
+\end{equation*}
+\\
+
+Likewise, when $i = 2$,
+
+\begin{center}
+	\begin{tabular}{cc}
+	\scalebox{1.5}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\diagbox{j}{k} & 1 & 2 & 3 \\ \hline
+			1 & 0 & 0 &-1 \\ \hline
+			2 & 0 & 0 & 0 \\ \hline
+			3 & 1 & 0 & 0 \\ 
+			\hline
+		\end{tabular}	
+	}
+	&
+	\scalebox{1.5}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\diagbox{m}{k} & 1 & 2 & 3 \\ \hline
+			1 & 0 & 0 &-1 \\ \hline
+			2 & 0 & 0 & 0 \\ \hline
+			3 & 1 & 0 & 0 \\ 
+			\hline
+		\end{tabular}	
+	}
+	\end{tabular}
+	\vspace*{1 cm}
+\end{center}
+
+Thus, 
+
+\begin{equation*}
+	\sum_k \epsilon_{2jk}\epsilon_{2mk} = 
+	\begin{cases}
+	  	\ 1 & \text{if } j = m \\
+	    \ 0 & \text{if } j \neq m
+	  \end{cases}
+\end{equation*}
+\\
+
+Last 
+\begin{center}
+	\begin{tabular}{cc}
+	\scalebox{1.5}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\diagbox{j}{k} & 1 & 2 & 3 \\ \hline
+			1 & 0 & 1 & 0 \\ \hline
+			2 & -1& 0 & 0 \\ \hline
+			3 & 0 & 0 & 0 \\ 
+			\hline
+		\end{tabular}	
+	}
+	&
+	\scalebox{1.5}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\diagbox{m}{k} & 1 & 2 & 3 \\ \hline
+			1 & 0 & 1 & 0 \\ \hline
+			2 & -1& 0 & 0 \\ \hline
+			3 & 0 & 0 & 0 \\ 
+			\hline
+		\end{tabular}	
+	}
+	\end{tabular}
+	\vspace*{1 cm}
+\end{center}
+
+Thus, 
+
+\begin{equation*}
+	\sum_k \epsilon_{3jk}\epsilon_{3mk} = 
+	\begin{cases}
+	  	\ 1 & \text{if } j = m \\
+	    \ 0 & \text{if } j \neq m
+	  \end{cases}
+\end{equation*}
+\\
+
+In sum,
+
+\begin{equation*}
+	\sum_k \epsilon_{ijk}\epsilon_{lmk} = \sum_k \epsilon_{ijk}\epsilon_{imk} = \delta_{jm} =
+	\begin{cases}
+	  	\ 1 & \text{if } j = m \\
+	    \ 0 & \text{if } j \neq m
+	  \end{cases}
+\end{equation*}
+
+
+\subsection*{(c) $i = m$}
+
+\subsection*{(d) $j = l$}
+
+\subsection*{(e) $j = m$}
+
+\subsection*{(f) $l = m$}
+
+\subsection*{(g) $i \neq j$ or $m$}
+
+\subsection*{(h) $j \neq l$ or $m$}
+
+
+\section{Show that $\sum\limits_k \epsilon_{ijk}\epsilon_{lmk} = \delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}$}
+
+\end{document}
